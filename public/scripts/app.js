@@ -7,6 +7,7 @@
 // Test / driver code (temporary). Eventually will get this from the server.
 
 
+
 function createTweetElement(tweetData) {
   const header = $('<header>').append($('<img>', {src:tweetData.user.avatars.large})).append($('<h3>').text(tweetData.user.name)).append($('<span>').addClass('user-tag').text(tweetData.user.handle));
   const footer = $('<footer>').append($('<span>').text(tweetData.created_at));
@@ -40,13 +41,23 @@ $(function(){
   $('.new-tweet').on('submit', function(event) {
     event.preventDefault();
     var form = $(this).find('form');
-    $.ajax({
-      method: 'post',
-      url: '/tweets',
-      data: form.serialize()
-    });
-    form.find('textarea').val('');
-    form.find('span').text('140');
+    var text = form.find('textarea');
+    if (text.val().length === 0) {
+      alert('No text.');
+    } else if (text.val().length > 140){
+      alert('Tweet is too long.')
+    } else {
+      $.ajax({
+        method: 'post',
+        url: '/tweets',
+        data: form.serialize()
+      }).done(function() {
+        $('#tweets-container').empty();
+        loadTweets();
+      });
+      text.val('');
+      form.find('span').text('140');
+    }
   });
 });
 
