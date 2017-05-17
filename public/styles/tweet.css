@@ -1,0 +1,66 @@
+article.tweet {
+  border-radius: 10px;
+  margin: 2em;
+  background-color: #CEF6F5;
+}
+
+article.tweet header {
+  color: #086A87;
+  background-color: #2ECCFA;
+  height: 70px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+article.tweet header img {
+  height: 50px;
+  float: left;
+  border: 2px solid #086A87;
+  border-radius: 10px;
+  background-color: #CEF6F5;
+  margin-right: 2em;
+}
+
+article.tweet header h3 {
+  float: left;
+  font-size: 150%;
+  line-height: 0px;
+}
+
+article.tweet header span {
+  float: right;
+}
+
+article.tweet .tweet-content {
+  padding: 20px;
+}
+
+article.tweet footer {
+  border-top: 1px solid #086A87;
+  height: 30px;
+  margin-top: 30px;
+}
+
+article.tweet footer span {
+  line-height: 30px;
+  padding-left: 10px;
+  font-size: small;
+}
+
+
+/*
+<section id="all-tweets">
+        <article class="tweet">
+          <header>
+            <img class="avatar" src="/images/bird.png">
+            <h3>Name</h3>
+            <span class="user-tag">@12313</span>
+          </header>
+          <span class="tweet-content">Hello World</span>
+          <footer>
+            10 days ago
+          </footer>
+        </article>
+      </section> */
