@@ -8,11 +8,11 @@
 
 
 function timeSince(date) {
-  const currentDate = new Date(date)
+  const currentDate = new Date(date);
   return currentDate;
 }
 function createTweetElement(tweetData) {
-  const header = $('<header>').append($('<img>', {src:tweetData.user.avatars.large})).append($('<h3>').text(tweetData.user.name)).append($('<span>').addClass('user-tag').text(tweetData.user.handle));
+  const header = $('<header>').append($('<img>', {src: tweetData.user.avatars.large})).append($('<h3>').text(tweetData.user.name)).append($('<span>').addClass('user-tag').text(tweetData.user.handle));
   const footer = $('<footer>').append($('<span>').text(timeSince(tweetData.created_at)));
   const content = $('<div>').addClass('tweet-content').text(tweetData.content.text);
   return $('<article>').addClass('tweet').append(header).append(content).append(footer);
@@ -21,7 +21,7 @@ function createTweetElement(tweetData) {
 function renderTweets(data) {
   $('#tweets-container').empty();
   data.forEach(function(element) {
-    $('#tweets-container').prepend(createTweetElement(element))
+    $('#tweets-container').prepend(createTweetElement(element));
   });
 }
 
@@ -32,7 +32,7 @@ function loadTweets() {
     success: function(tweetsData) {
       renderTweets(tweetsData);
     }
-  })
+  });
 }
 
 $(function(){
@@ -40,7 +40,7 @@ $(function(){
     $('.new-tweet').slideToggle(350, function() {
       $(this).find('textarea').focus();
     });
-  })
+  });
 });
 
 $(function(){
@@ -55,7 +55,7 @@ $(function(){
     if (text.val().length === 0) {
       alert('No text.');
     } else if (text.val().length > 140){
-      alert('Tweet is too long.')
+      alert('Tweet is too long.');
     } else {
       $.ajax({
         method: 'post',
