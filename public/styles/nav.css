@@ -10,6 +10,8 @@
   z-index: 1;
 }
 
+
+
 #nav-bar .logo {
    width: 80px;
    height: 80px;
@@ -22,4 +24,15 @@
   font-size: 200%;
   line-height: 80px;
 
+}
+
+#nav-bar button {
+  float: right;
+  padding: 5px;
+  margin: 20px;
+  opacity: 1;
+}
+
+#nav-bar button:hover {
+  opacity: 0.8;
 }
