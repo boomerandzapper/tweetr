@@ -1,12 +1,19 @@
 $(function(){
+  const counter = $('#counter');
   $('.new-tweet > form').on('keyup', 'textarea', function () {
-    let charused = $(this).val().length;
-    let counter = $(this).closest('form').find('.counter')
-    counter.text(140 - charused);
-    if (charused > 140) {
+    const charUsed = $(this).val().length;
+    counter.text(140 - charUsed);
+    toggleCounterError(validate(charUsed));
+  });
+  function validate(charCount) {
+    return charCount > 140;
+  }
+  //Call this function with true to add an error, or call this function to remove error
+  function toggleCounterError(addError) {
+    if (addError) {
       counter.addClass('error');
     } else {
       counter.removeClass('error');
     }
-  });
+  }
 });
