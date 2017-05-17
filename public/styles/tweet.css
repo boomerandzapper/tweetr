@@ -31,8 +31,8 @@ article.tweet header img {
 
 article.tweet header h3 {
   float: left;
-  font-size: 150%;
-  line-height: 0px;
+  font-size: 120%;
+  line-height: 10px;
 }
 
 article.tweet header span {
