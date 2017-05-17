@@ -21,7 +21,7 @@ function createTweetElement(tweetData) {
 function renderTweets(data) {
   $('#tweets-container').empty();
   data.forEach(function(element) {
-    $('#tweets-container').append(createTweetElement(element))
+    $('#tweets-container').prepend(createTweetElement(element))
   });
 }
 
@@ -39,7 +39,6 @@ $(function(){
   $('#nav-bar > button').on('click', function () {
     $('.new-tweet').slideToggle(350, function() {
       $(this).find('textarea').focus();
-      console.log('dfd');
     });
   })
 });
