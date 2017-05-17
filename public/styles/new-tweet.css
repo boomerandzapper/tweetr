@@ -1,11 +1,11 @@
 .new-tweet {
   background-color: #eee;
-  margin-right: 2em;
-  margin-left: 2em;
+  margin: 2em;
   border-radius: 10px;
   padding-left: 15px;
   padding-right: 15px;
   position: relative;
+  border: 1px solid white;
 }
 
 .counter {
@@ -28,6 +28,3 @@ textarea {
   padding: 10px;
 }
 
-section {
-
-}
