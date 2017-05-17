@@ -39,7 +39,7 @@ article.tweet header span {
 }
 
 article.tweet .tweet-content {
-  padding: 20px;
+  margin: 20px;
 }
 
 article.tweet footer {
