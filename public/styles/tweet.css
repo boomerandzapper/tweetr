@@ -2,6 +2,11 @@ article.tweet {
   border-radius: 10px;
   margin: 2em;
   background-color: #CEF6F5;
+  opacity: 0.75;
+}
+
+article.tweet:hover {
+  opacity: 1;
 }
 
 article.tweet header {
