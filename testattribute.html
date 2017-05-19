@@ -1,0 +1,15 @@
+<head>
+    <script type="text/javascript" src="public/vendor/jquery-2.2.3.min.js"></script>
+</head>
+
+<div id='strawberry-plant' data-fruit='12'>abc</div>
+
+<script>
+// 'Getting' data-attributes using getAttribute
+$( "div" ).data('ab', 'sdf' );
+console.log($( "div" ).data())
+var plant = document.getElementById('strawberry-plant');
+var fruitCount = plant.getAttribute('data-fruit'); // fruitCount = '12'
+
+console.log(fruitCount)
+</script>
