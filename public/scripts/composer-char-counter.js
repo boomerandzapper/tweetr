@@ -1,10 +1,5 @@
 $(function(){
   const counter = $('#counter');
-  $('.new-tweet > form').on('keyup', 'textarea', function () {
-    const charUsed = $(this).val().length;
-    counter.text(140 - charUsed);
-    toggleCounterError(validate(charUsed));
-  });
   function validate(charCount) {
     return charCount > 140;
   }
@@ -16,4 +11,9 @@ $(function(){
       counter.removeClass('error');
     }
   }
+  $('.new-tweet > form').on('keyup', 'textarea', function () {
+    const charUsed = $(this).val().length;
+    counter.text(140 - charUsed);
+    toggleCounterError(validate(charUsed));
+  });
 });
