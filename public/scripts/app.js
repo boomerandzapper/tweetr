@@ -12,8 +12,11 @@ function timeSince(date) {
   return currentDate;
 }
 function createTweetElement(tweetData) {
+  var creationTime = moment(tweetData.created_at).format("YYYY-MM-DD HH:mm");
+  var createdDate = (moment(creationTime).fromNow());
+  console.log(createdDate)
   const header = $('<header>').append($('<img>', {src: tweetData.user.avatars.large})).append($('<h3>').text(tweetData.user.name)).append($('<span>').addClass('user-tag').text(tweetData.user.handle));
-  const footer = $('<footer>').append($('<span>').text(timeSince(tweetData.created_at)));
+  const footer = $('<footer>').append($('<span>').text(createdDate));
   const content = $('<div>').addClass('tweet-content').text(tweetData.content.text);
   return $('<article>').addClass('tweet').append(header).append(content).append(footer);
 }
