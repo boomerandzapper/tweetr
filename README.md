@@ -5,7 +5,7 @@ Tweeter is a simple, single-page Twitter clone. Users post text within 140 chara
 A demo can be found at:
 https://salty-fjord-34486.herokuapp.com/
 
-##Screenshot
+## Screenshot
 
 !['Home Page'](https://github.com/boomerandzapper/tweetr/blob/master/Docs/screenshot.png)
 
