@@ -16,7 +16,8 @@ function createTweetElement(tweetData) {
   var createdDate = (moment(creationTime).fromNow());
   console.log(createdDate)
   const header = $('<header>').append($('<img>', {src: tweetData.user.avatars.large})).append($('<h3>').text(tweetData.user.name)).append($('<span>').addClass('user-tag').text(tweetData.user.handle));
-  const footer = $('<footer>').append($('<span>').text(createdDate));
+  const footerIcons = $('<div>').addClass('tweet-icons').append($('<img>', {src: '../images/retweet.png'})).append($('<img>', {src: '../images/like.png'})).append($('<img>', {src: '../images/flag.png'}));
+  const footer = $('<footer>').append($('<span>').text(createdDate)).append(footerIcons);
   const content = $('<div>').addClass('tweet-content').text(tweetData.content.text);
   return $('<article>').addClass('tweet').append(header).append(content).append(footer);
 }

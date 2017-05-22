@@ -50,10 +50,27 @@ article.tweet footer {
   margin-top: 30px;
 }
 
+
+article.tweet footer img{
+  height: 25px;
+
+}
+
+
+article.tweet footer div{
+  float: right;
+  opacity: 0;
+}
+
+article.tweet:hover footer div{
+  float: right;
+  opacity: 1;
+}
 article.tweet footer span {
   line-height: 30px;
   padding-left: 10px;
   font-size: small;
+  float: left;
 }
 
 
